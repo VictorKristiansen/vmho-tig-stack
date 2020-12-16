@@ -8,7 +8,7 @@ services:
       - "8086:8086"
       - "8090:8090"
     volumes:
-      - /Users/victorkristiansen/Documents/tig-stack/influxdb:/var/lib/influxdb
+      - /home/vmho-admin/vmho-tig-stack/influxdb:/var/lib/influxdb
 
   telegraf:
     image: telegraf:latest
@@ -18,17 +18,17 @@ services:
     links:
       - influxdb
     volumes:
-      - /Users/victorkristiansen/Documents/tig-stack/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /home/vmho-admin/vmho-tig-stack/telegraf.conf:/etc/telegraf/telegraf.conf:ro
 
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=pass
+      - GF_SECURITY_ADMIN_PASSWORD=Braekspand01
     depends_on:
       - influxdb
-    user: "501"
+    user: "1000"
     ports:
       - "3000:3000"
     volumes:
-      - /Users/victorkristiansen/Documents/tig-stack/grafana_data:/var/lib/grafana
+      - /home/vmho-admin/vmho-tig-stack/grafana_data:/var/lib/grafana
