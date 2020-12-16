@@ -6,8 +6,6 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=vmho-admin
       - GF_SECURITY_ADMIN_PASSWORD=Braekspand01
-    depends_on:
-      - influxdb
     user: "1000"
     ports:
       - "80:3000"
