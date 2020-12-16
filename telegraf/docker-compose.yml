@@ -6,4 +6,4 @@ services:
     ports:
       - "6514:6514/udp"
     volumes:
-      - /home/vmho-admin/vmho-tig-stack/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /home/vmho-admin/vmho-tig-stack/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
