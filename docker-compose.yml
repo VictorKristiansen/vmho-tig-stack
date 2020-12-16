@@ -24,6 +24,7 @@ services:
     image: grafana/grafana:latest
     container_name: grafana
     environment:
+      - GF_SECURITY_ADMIN_USER=vmho-admin
       - GF_SECURITY_ADMIN_PASSWORD=Braekspand01
     depends_on:
       - influxdb
