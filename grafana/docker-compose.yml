@@ -6,8 +6,8 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=vmho-admin
       - GF_SECURITY_ADMIN_PASSWORD=Braekspand01
-    user: "1000"
+    user: "501"
     ports:
-      - "80:3000"
+      - "3000:3000"
     volumes:
-      - /home/vmho-admin/vmho-tig-stack/grafana:/var/lib/grafana
+      - /Users/victorkristiansen/Documents/GitHub/vmho-tig-stack/grafana:/var/lib/grafana
