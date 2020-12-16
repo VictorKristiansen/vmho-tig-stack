@@ -10,4 +10,4 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - /Users/victorkristiansen/Documents/GitHub/vmho-tig-stack/grafana:/var/lib/grafana
+      - /home/vmho-admin/vmho-tig-stack/grafana:/var/lib/grafana
