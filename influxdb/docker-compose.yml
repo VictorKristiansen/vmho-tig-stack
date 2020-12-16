@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+      - "8090:8090"
+    volumes:
+      - /home/vmho-admin/vmho-tig-stack/influxdb:/var/lib/influxdb
